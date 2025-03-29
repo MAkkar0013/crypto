@@ -104,7 +104,7 @@ const Dashboard = () => {
       setError(null);
 
       const response = await axios.get(
-        `https://crypto-back-tbzc.onrender.com/api//portfolio/${userId}`
+        `https://crypto-back-awn4.onrender.com/api/portfolio/${userId}`
       );
 
       if (response.data) {
@@ -112,7 +112,7 @@ const Dashboard = () => {
           response.data.map(async (coin) => {
             try {
               const priceResponse = await axios.get(
-                `https://crypto-back-tbzc.onrender.com/api/coin-price/${coin.id}`
+                `https://crypto-back-awn4.onrender.com/api/coin-price/${coin.id}`
               );
               return {
                 ...coin,
@@ -154,7 +154,7 @@ const Dashboard = () => {
 
       // Сначала популярные монеты
       const popularResponse = await axios.get(
-        `https://crypto-back-tbzc.onrender.com/api/popular-cryptocurrencies`
+        `https://crypto-back-awn4.onrender.com/api/popular-cryptocurrencies`
       );
 
       if (Array.isArray(popularResponse.data)) {
@@ -168,7 +168,7 @@ const Dashboard = () => {
 
         // Затем все монеты
         const allResponse = await axios.get(
-          `https://crypto-back-tbzc.onrender.com/api/cryptocurrencies`
+          `https://crypto-back-awn4.onrender.com/api/cryptocurrencies`
         );
 
         if (Array.isArray(allResponse.data)) {
@@ -190,7 +190,7 @@ const Dashboard = () => {
       setLoading((prev) => ({ ...prev, price: true }));
 
       const response = await axios.get(
-        `https://crypto-back-tbzc.onrender.com/api/coin-price/${coinId}`
+        `https://crypto-back-awn4.onrender.com/api/coin-price/${coinId}`
       );
 
       return response.data?.price || 0;
@@ -222,7 +222,7 @@ const Dashboard = () => {
       }
 
       await axios.post(
-        `https://crypto-back-tbzc.onrender.com/api/api/portfolio/${userId}`,
+        `https://crypto-back-awn4.onrender.com/api/portfolio/${userId}`,
         {
           coin_id: selectedCoin.id,
           quantity: parseFloat(quantity),
@@ -247,7 +247,7 @@ const Dashboard = () => {
       setError(null);
 
       await axios.delete(
-        `https://crypto-back-tbzc.onrender.com/api/portfolio/${userId}/${coinId}`
+        `https://crypto-back-awn4.onrender.com/api/portfolio/${userId}/${coinId}`
       );
 
       await fetchPortfolio();
@@ -269,7 +269,7 @@ const Dashboard = () => {
           `https://crypto-back-tbzc.onrender.com/api/api/coin/${coinId}`
         ),
         axios.get(
-          `https://crypto-back-tbzc.onrender.com/api/coin/${coinId}/market_chart?days=1`
+          `https://crypto-back-awn4.onrender.com/api/coin/${coinId}/market_chart?days=1`
         ),
       ]);
 
