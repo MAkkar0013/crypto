@@ -33,7 +33,7 @@ const Login = () => {
       setLoading(false);
     }
   };
-
+console.log('new')
   return (
     <>
       <div className="auth-container">
