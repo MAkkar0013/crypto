@@ -23,7 +23,7 @@ const Register = () => {
       setLoading(true);
       setError("");
       const response = await axios.post(
-        `https://crypto-back-tbzc.onrender.com/register`,
+        `https://crypto-back-awn4.onrender.com/register`,
         {
           username,
           password,
