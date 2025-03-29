@@ -17,7 +17,7 @@ import os
 
 app = Flask(__name__, static_folder='../frontend/build')
 CORS(app, resources={
-    r"/api/*": {"origins": ["https://your-frontend-url.onrender.com", "http://localhost:3000"]}
+    r"/api/*": {"origins": ["https://crypto-front-mwgh.onrender.com/", "http://localhost:3000"]}
 })
 bcrypt = Bcrypt(app)
 
