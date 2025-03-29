@@ -35,7 +35,7 @@ const AdminPanel = () => {
       setLoading((prev) => ({ ...prev, users: true }));
       setError(null);
 
-      const response = await axios.get(`${API}api/admin/users`, {
+      const response = await axios.get(`https://crypto-back-awn4.onrender.com/api/admin/users`, {
         headers: {
           "X-User-Id": localStorage.getItem("user_id"),
         },
@@ -54,7 +54,7 @@ const AdminPanel = () => {
       setError(null);
 
       const response = await axios.get(
-        `https://crypto-back-tbzc.onrender.com/api/admin/user/${userId}/portfolio`,
+        `https://crypto-back-awn4.onrender.com/api/admin/user/${userId}/portfolio`,
         {
           headers: {
             "X-User-Id": localStorage.getItem("user_id"),
@@ -75,7 +75,7 @@ const AdminPanel = () => {
       setLoading((prev) => ({ ...prev, adminToggle: true }));
 
       const response = await axios.post(
-        `https://crypto-back-tbzc.onrender.com/api/admin/user/${userId}/toggle-admin`,
+        `https://crypto-back-awn4.onrender.com/api/admin/user/${userId}/toggle-admin`,
         {},
         {
           headers: {
