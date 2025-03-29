@@ -1,0 +1,17 @@
+# Основные зависимости
+Flask==3.0.3
+Flask-SQLAlchemy==3.1.1
+Flask-Cors==4.0.0
+Flask-Bcrypt==1.0.1
+gunicorn==21.2.0
+
+# Для работы с базой данных
+psycopg2-binary==2.9.9  # Для PostgreSQL на Render
+SQLAlchemy==2.0.25
+
+# Дополнительные утилиты
+python-dotenv==1.0.0
+requests==2.31.0
+
+# Дата/время
+python-dateutil==2.8.2
